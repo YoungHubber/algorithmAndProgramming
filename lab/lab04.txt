@@ -1,0 +1,96 @@
+Algorithms and Programming
+Laboratory number 04
+--------------------
+
+
+
+Exercise 01
+-----------
+
+With reference to
+Exercise 01 of Laboratory 03
+use a dynamically allocated structure to store the set of words read
+from file and their relative absolute frequency.
+
+The structure may include a static array to store the string.
+
+The number of words stored in the second file, is specified on the
+first row of the file itself.
+
+
+
+Exercise 02 (A and B)
+---------------------
+
+A file has the following format:
+- the first row contains an integer number n
+- the following n rows store a string (each string is terminated
+  by a '\n' character).
+The longest string included in the file is 100 character long but
+the average string length is much smaller (e.g., 10 characters).
+
+A C program receives two file names on the command line (input and
+output file names).
+The first file has the format previously specified.
+The program:
+1) reads the content of the first (input) file and stores all strings
+   into a dynamic data structure
+2) orders the strings in alphabetic order
+3) stores the strings in the second (output) file.
+   The output file has the same format of the input one.
+
+Write two versions of the program:
+
+- The first one stores all words in an 1D dynamic array of structures
+  with dynamic fields.
+
+  The structure should be defined as:
+  struct string {
+    char *str;
+  };
+
+  A first "malloc" allocates the array.
+  One more "malloc" for each array element allocates the string space
+  to store each string.
+
+- The second one stores all word in a 2D dynamic matrix of characters:
+
+  The dynamic matrix can be defined as:
+  char **mat;
+  and each string stored on a row of the matrix such that
+  mat[i] (or &mat[i][0])
+  is the pointer to the first character of the string in position i.
+
+  In this second version, to reorder the strings will be necessary to
+  swap strings or sufficient to swap pointers to strings?
+
+Example
+-------
+
+The following is an example of a correct input file:
+
+10
+this
+is
+an
+example
+of
+file
+used
+to
+order
+strings
+
+and the following is the corresponding output file:
+
+10
+an
+example
+file
+is
+of
+order
+strings
+this
+to
+used
