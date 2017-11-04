@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 /*
  *  read the words file; return the index array
  */
-void read_words(char *name, index_t index[], int *num_ptr)
+void read_words(char *name, index_t *index, int *num_ptr)
 {
   FILE *fp;
   int i;
@@ -76,7 +76,7 @@ void read_words(char *name, index_t index[], int *num_ptr)
 /*
  *  read the text file; complete the index infos
  */
-void read_text(char *name, index_t index[], int n)
+void read_text(char *name, index_t *index, int n)
 {
   char word[MAX_LINE_LENGTH+1];
   int i, j;
@@ -106,7 +106,7 @@ void read_text(char *name, index_t index[], int n)
 /*
  *  output the index contents
  */
-void display_index(index_t index[], int n)
+void display_index(index_t **index, int n)
 {
   int i;
 
