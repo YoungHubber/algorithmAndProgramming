@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511803528 source:d:\im strong\algorithm-and-programming-2017\exonbook\4.9arrayvisit\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+

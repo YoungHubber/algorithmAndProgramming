@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1512588517 source:d:\im strong\algorithm-and-programming-2017\listbooktest\lsitvist\main.c
+	<stdio.h>
+	<stdlib.h>
+

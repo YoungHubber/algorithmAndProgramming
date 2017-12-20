@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #define DIM 10
+//二重循环，注意处理边界
 
 int main(void)
 {
@@ -27,7 +28,7 @@ int main(void)
     v2[i] = 0;
     n = 0;
     for (j=-n2; j<=n2; j++) {
-      if ((i+j)>=0 && (i+j)<n1) {
+      if ((i+j)>=0 && (i+j)<n1) {            //左右边界
         v2[i] = v2[i] + v1[i+j];
         n++;
       }

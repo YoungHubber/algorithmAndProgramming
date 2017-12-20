@@ -14,7 +14,7 @@ int main(void)
     scanf("%d", &r1);
     printf("  Number of columns: ");
     scanf("%d", &c1);
-  } while (r1<=0 || r1>MAX || c1<=0 || c1>MAX);
+  } while (r1<=0 || r1>MAX || c1<=0 || c1>MAX);     //dowhile exit controlled condition
   printf("Second matrix size:\n");
   do {
     printf("  Number of rows: ");

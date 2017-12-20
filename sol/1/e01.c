@@ -17,10 +17,10 @@ int main(void)
   lengthMax = 1;
   /* max length search */
   for (i=0; i<DIM; i++) {
-    if (i<DIM-1 && array[i]<array[i+1]) {
+    if (i<DIM-1 && array[i]<array[i+1]) {    
       length++;
     } else {
-      if (length > lengthMax) {
+      if (length > lengthMax) {                    //更新
         lengthMax = length + 1;
         posMax = i - length;
       }
